@@ -8,20 +8,22 @@ use Exception;
 use Illuminate\Http\Request;
 use App\Services\GeminiService;
 use App\Services\ElevenLabsService;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Routing\Redirector;
+use Illuminate\Http\RedirectResponse;
 
 class StoryController extends Controller
 {
 
-    protected $geminiService;
-    protected $elevenLabsService;
-
-    public function __construct(GeminiService $geminiService, ElevenLabsService $elevenLabsService)
+    public function __construct(
+        protected GeminiService     $geminiService,
+        protected ElevenLabsService $elevenLabsService)
     {
-        $this->geminiService = $geminiService;
-        $this->elevenLabsService = $elevenLabsService;
     }
 
-    public function index()
+    public function index(): Factory|View|Application
     {
         return view('story.multistep');
     }
@@ -30,7 +32,7 @@ class StoryController extends Controller
     /**
      * @throws Exception
      */
-    public function generateStory(Request $request)
+    public function generateStory(Request $request): Redirector|Application|RedirectResponse
     {
         set_time_limit(120);
 
@@ -65,7 +67,7 @@ class StoryController extends Controller
         return redirect(route('showStory'))->with('audio_url', asset('audio/' . $fileName));
     }
 
-    public function show()
+    public function show(): Factory|View|Application
     {
         $stories = Story::with(['voiceAudios'])
             ->orderBy('created_at', 'desc')
