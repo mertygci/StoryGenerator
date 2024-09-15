@@ -1,0 +1,65 @@
+.label-description {
+    color: #007bff; /* Açıklama rengi mavi olarak ayarlandı. */
+    font-size: 0.9em;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+.radio-option {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.radio-option input[type="radio"] {
+    margin-top: 5px;
+}
+.radio-option .radio-label {
+    margin-left: 10px;
+}
+.radio-option .radio-label .description {
+    font-size: 0.9em;
+    color: #6c757d; /* Açıklama rengi gri */
+}
+.radio-option .custom-radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.radio-option .custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.radio-option .custom-radio .checkmark {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    border: 1px solid #dcdcdc;
+}
+.radio-option .custom-radio input:checked ~ .checkmark {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+}
+.radio-option .custom-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radio-option .custom-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+.radio-option .custom-radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
