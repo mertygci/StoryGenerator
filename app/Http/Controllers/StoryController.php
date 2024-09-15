@@ -47,15 +47,22 @@ class StoryController extends Controller
 
         $story = $this->geminiService->generateStory($validated);
 
-        $storyContent = $this->elevenLabsService->convertTextToAudio($story,$validated['voice'],$validated['language'],'eleven_multilingual_v2');
+        $storyContent = $this->elevenLabsService->convertTextToAudio($story, $validated['voice'], $validated['language'], 'eleven_multilingual_v2');
 
         $savedStory = Story::create([
             'title' => $validated['title'] ?? 'Generated Story',
             'content' => $story,
         ]);
 
-        $fileName = $validated['title'] . '.mp3';
-        $filePath = public_path('audio/' . $fileName);
+        $fileName = ($validated['title'] ?? 'Generated_Story') . '.mp3';
+        $audioDirectory = public_path('audio/');
+
+        // Ensure the 'audio' directory exists
+        if (!file_exists($audioDirectory)) {
+            mkdir($audioDirectory, 0777, true); // Create the directory with full permissions
+        }
+
+        $filePath = $audioDirectory . $fileName;
         file_put_contents($filePath, $storyContent);
 
         VoiceAudio::create([
@@ -73,6 +80,6 @@ class StoryController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return view('story.show',compact('stories'));
+        return view('story.show', compact('stories'));
     }
 }
