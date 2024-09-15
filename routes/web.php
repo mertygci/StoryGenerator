@@ -14,14 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('multistep');
+    return redirect(route('indexStory'));
 });
-
-use App\Http\Controllers\ElevenLabsController;
-
-Route::get('voices', [ElevenLabsController::class, 'indexVoices'])->name('voices.index');
-Route::get('text-to-speech', [ElevenLabsController::class, 'textToSpeech'])->name('text.to.speech');
-Route::post('synthesize', [ElevenLabsController::class, 'synthesize'])->name('synthesize');
 
 use App\Http\Controllers\StoryController;
 

@@ -23,7 +23,7 @@ class StoryController extends Controller
 
     public function index()
     {
-        return view('multistep');
+        return view('story.multistep');
     }
 
 
@@ -57,7 +57,7 @@ class StoryController extends Controller
         file_put_contents($filePath, $storyContent);
 
         VoiceAudio::create([
-            'story_id' => $savedStory->id, // Link audio to the story
+            'story_id' => $savedStory->id,
             'voice_id' => $validated['voice'] ?? 'default_voice',
             'file_path' => 'audio/' . $fileName,
         ]);
