@@ -1,13 +1,7 @@
-<p align="center"><a href="https://gemini.com" target="_blank"><img src="https://gemini.com/logo.png" width="200" alt="Gemini Logo"></a></p>
+<p align="center"><a href="https://gemini.com" target="_blank"><img src="https://www.gemini.com/_next/image?url=%2Fstatic%2Fimages%2Fgemini-hor-light-full-rgb%403x.png&w=256&q=75" width="200" alt="Gemini Logo"></a></p>
 
-<p align="center"><a href="https://elevenlabs.io" target="_blank"><img src="https://elevenlabs.io/logo.png" width="200" alt="ElevenLabs Logo"></a></p>
+<p align="center"><a href="https://elevenlabs.io" target="_blank"><img src="https://mintlify.s3-us-west-1.amazonaws.com/elevenlabs-docs/logo/favicon.png" width="50" alt="ElevenLabs Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/yourusername/yourproject"><img src="https://travis-ci.org/yourusername/yourproject.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/yourusername/yourproject"><img src="https://img.shields.io/packagist/dt/yourusername/yourproject" alt="Toplam İndirme"></a>
-<a href="https://packagist.org/packages/yourusername/yourproject"><img src="https://img.shields.io/packagist/v/yourusername/yourproject" alt="Son Sürüm"></a>
-<a href="https://packagist.org/packages/yourusername/yourproject"><img src="https://img.shields.io/packagist/l/yourusername/yourproject" alt="Lisans"></a>
-</p>
 
 ## Proje Hakkında
 
