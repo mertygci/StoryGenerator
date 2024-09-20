@@ -13,6 +13,16 @@ Bu proje, Gemini ve ElevenLabs API'lerini kullanarak dinamik ses özellikleriyle
 - **Ses Entegrasyonu**: ElevenLabs API'sini kullanarak hikayeler için çeşitli duygusal tonlarda ve dillerde sesler oluşturun.
 - **Ses Özelleştirme**: Üretilen sesler için cinsiyet ve dil gibi özellikleri seçin.
 
+## Gemini API Entegrasyonu
+
+Gemini API'si, kullanıcı girdilerine dayalı hikayeler oluşturmak için kullanılır. Belirli istek parametreleri göndererek kişiselleştirilmiş içerik oluşturmanıza olanak tanır.
+
+- **API Dokümantasyonu**: [Gemini API Dokümantasyonu](https://gemini.com/api/docs)
+
+## ElevenLabs API Entegrasyonu
+
+ElevenLabs API'si, çeşitli duygusal tonlar ve dil seçenekleriyle metinden konuşmaya (TTS) işlevselliği sağlar.
+
 - **API Dokümantasyonu**: [ElevenLabs API Dokümantasyonu](https://elevenlabs.io/api/docs)
 - **Kullanım**: API'yi, belirli duygular ve sesler ile ses dosyaları oluşturacak şekilde yapılandırın. Bu dosyaları kaydedin ve oluşturulan hikayelerle ilişkilendirin.
 
